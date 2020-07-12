@@ -5,7 +5,7 @@ import guru.springframework.sfgpetclinic.service.CrudService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService implements CrudService {
+public class OwnerServiceMap extends AbstractMapService<Owner,Long > implements CrudService <Owner,Long>{
 
 
     public Set<Owner> findAll() {
@@ -26,6 +26,6 @@ public class OwnerServiceMap extends AbstractMapService implements CrudService {
     }
 
     public Owner save(Owner object) {
-        return super.save(object);
+        return super.save(object.getId(),object);
     }
 }
