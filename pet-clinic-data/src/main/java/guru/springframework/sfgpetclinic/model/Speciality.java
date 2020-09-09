@@ -8,6 +8,7 @@ public class Speciality extends  BaseEntity{
         return description;
     }
 
+
     public void setDescription(String description) {
         this.description = description;
 
